@@ -30,7 +30,17 @@
     printf("Mercii");
 
   }
-  
+int  a[]={2000,1000,500,200,100,50,20,10,5,1},temp,i; 
+ 
+    temp=ex;
+     for(i=0;i<10;i++)
+    {
+     printf("\n%d notes is:%d\n",a[i],temp/a[i]);
+     temp=temp%a[i];
+      
+    
+       
+    }  
    int  r2000=0, r1000=0, r500=0, r200=0,  r100=0, r50=0, r20=0, r25=0, r10=0, r5=0 , r1=0, x=0; 
 
   
