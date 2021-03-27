@@ -3,6 +3,10 @@ float a;//valeur a payer
 float b;//montant donner par l'utilisateur
 float m;//montant a retourner
 //nombre de billet et piece
+
+int total;
+float rendu_monnaie(float n)
+{
 int n2000=3;
 int n1000=8;
 int n500=7;
@@ -17,10 +21,10 @@ int n1=91;
 int n50s=22;
 int n20s=18;
 int n5s=9;
-float rendu_monnaie(float n)
-{
 int count1=0;
 m=b-a;
+do
+{
 while (m>=2000 && n2000>0)
 {
 	m=m-2000;
@@ -162,6 +166,12 @@ printf("%d pieces de 50 sous\n",n50s);
 printf("%d pieces de 20 sous\n",n20s);
 printf("%d pieces de 5 sous\n",n5s);
 
+total=((n2000*2000)+(n1000*1000)+(n500*500)+(n200*200)+(n100*100)+(n50*50)+(n25*25)+(n20*20)+(n10*10)+(n5*5)+(n1*1)+(n50s*0.5)+(n20s*0.2)+(n5s*0.05));
+}while(total>=m);
+if (a>=total)
+{
+printf("Caisse vide!");
+}
 return 0;
 }
 
